@@ -11,13 +11,13 @@ class Papr < Formula
   depends_on "python@3.12"
 
   resource "pycairo" do
-    url "https://files.pythonhosted.org/packages/64/31/a7f1dfd52fc09898faitde97f9d01ae8d57d6d320350a1be7346b7b8b619/pycairo-1.29.0.tar.gz"
-    sha256 "a11b999ce55b798dbf13516ab038e0ce8b6ec299b208d7c4e767a6f7e68e8430"
+    url "https://files.pythonhosted.org/packages/22/d9/1728840a22a4ef8a8f479b9156aa2943cd98c3907accd3849fb0d5f82bfd/pycairo-1.29.0.tar.gz"
+    sha256 "f3f7fde97325cae80224c09f12564ef58d0d0f655da0e3b040f5807bd5bd3142"
   end
 
   resource "pygobject" do
-    url "https://files.pythonhosted.org/packages/4a/49/05e73804c9c52cf82d10d9acb1e8540a0e3e0d33f618bb218e1c4cc4ddca/pygobject-3.54.5.tar.gz"
-    sha256 "5ba0c8345c4c03cd5c8ca681df3dc7f7a20ba9c5e82b42382ed5a4cdb1f1afbb"
+    url "https://files.pythonhosted.org/packages/d3/a5/68f883df1d8442e3b267cb92105a4b2f0de819bd64ac9981c2d680d3f49f/pygobject-3.54.5.tar.gz"
+    sha256 "b6656f6348f5245606cf15ea48c384c7f05156c75ead206c1b246c80a22fb585"
   end
 
   def install
