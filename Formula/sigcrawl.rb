@@ -5,21 +5,21 @@
 class Sigcrawl < Formula
   desc "Local-first Signal Desktop archive crawler"
   homepage "https://github.com/peetzweg/sigcrawl"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/peetzweg/sigcrawl/releases/download/v0.2.0/sigcrawl_0.2.0_darwin_amd64.tar.gz"
-      sha256 "5e084d5aaa27629a62c56d8d24f20a69cdb117a29b0b181feab1604a8bc2b454"
+      url "https://github.com/peetzweg/sigcrawl/releases/download/v0.2.1/sigcrawl_0.2.1_darwin_amd64.tar.gz"
+      sha256 "3d5d299514be87039323bba7e5e2018537613b6558fbe6f9fb3d6f02a71145e6"
 
       define_method(:install) do
         bin.install "sigcrawl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/peetzweg/sigcrawl/releases/download/v0.2.0/sigcrawl_0.2.0_darwin_arm64.tar.gz"
-      sha256 "ff400feaa8a0077ca5ea754b3f41231cee8ad8e96b2153ea6f587bc83e18f7fa"
+      url "https://github.com/peetzweg/sigcrawl/releases/download/v0.2.1/sigcrawl_0.2.1_darwin_arm64.tar.gz"
+      sha256 "f63a877883bc64c00793a076191b3ffba9090a22cc4bb3ebeacb1fdcf227daf4"
 
       define_method(:install) do
         bin.install "sigcrawl"
@@ -29,15 +29,15 @@ class Sigcrawl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peetzweg/sigcrawl/releases/download/v0.2.0/sigcrawl_0.2.0_linux_amd64.tar.gz"
-      sha256 "1c98840751235f7bb26732db80538946a784907d2f4c6cd3b1d22ec954d6ce20"
+      url "https://github.com/peetzweg/sigcrawl/releases/download/v0.2.1/sigcrawl_0.2.1_linux_amd64.tar.gz"
+      sha256 "8db2b1d4f602c68283256437d057e3dc88a4bb8da117cd205869de7209ccd3f1"
       define_method(:install) do
         bin.install "sigcrawl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peetzweg/sigcrawl/releases/download/v0.2.0/sigcrawl_0.2.0_linux_arm64.tar.gz"
-      sha256 "d7afed88344b06dab3722d5bbf35909b095c539eab59e3c5e0cf67e56a8bd060"
+      url "https://github.com/peetzweg/sigcrawl/releases/download/v0.2.1/sigcrawl_0.2.1_linux_arm64.tar.gz"
+      sha256 "dfdf54c3f784ec1096f867d41ecdda17b52ee40d0f0122f97ecf429f86680359"
       define_method(:install) do
         bin.install "sigcrawl"
       end
