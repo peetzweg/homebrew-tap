@@ -5,21 +5,21 @@
 class Matcrawl < Formula
   desc "Local-first Matrix archive crawler"
   homepage "https://github.com/peetzweg/matcrawl"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/peetzweg/matcrawl/releases/download/v0.2.0/matcrawl_0.2.0_darwin_amd64.tar.gz"
-      sha256 "a3496ac05c05e213c81f4fa761397aca3266d1e3701d04af978032efccef15c6"
+      url "https://github.com/peetzweg/matcrawl/releases/download/v0.3.0/matcrawl_0.3.0_darwin_amd64.tar.gz"
+      sha256 "9949d11276fd7bc0196e7917fa90946077834611e1b19cb75ba8a71895bdae32"
 
       define_method(:install) do
         bin.install "matcrawl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/peetzweg/matcrawl/releases/download/v0.2.0/matcrawl_0.2.0_darwin_arm64.tar.gz"
-      sha256 "6faaeb666bba1efef29e0076703f38831b951a816381d0c8580166f7cbc4aaf3"
+      url "https://github.com/peetzweg/matcrawl/releases/download/v0.3.0/matcrawl_0.3.0_darwin_arm64.tar.gz"
+      sha256 "78b98316c3b8ed6545eaf9e9c42f2f61bc3f6acdf114897952f16c684ba0908d"
 
       define_method(:install) do
         bin.install "matcrawl"
@@ -29,15 +29,15 @@ class Matcrawl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peetzweg/matcrawl/releases/download/v0.2.0/matcrawl_0.2.0_linux_amd64.tar.gz"
-      sha256 "6e2ab07bed81b67bef61fb780f2a539f1ea85a47ae852ff3039035311fc6f0a7"
+      url "https://github.com/peetzweg/matcrawl/releases/download/v0.3.0/matcrawl_0.3.0_linux_amd64.tar.gz"
+      sha256 "f29371d1f4fcfbbf408c9216dbfd580cfad0783b02ba2b602afa89efff9d544d"
       define_method(:install) do
         bin.install "matcrawl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peetzweg/matcrawl/releases/download/v0.2.0/matcrawl_0.2.0_linux_arm64.tar.gz"
-      sha256 "8f578ca774b61ab5c14f1af36bfceaa4d1eb9d3e10297b6f671272a00921dafc"
+      url "https://github.com/peetzweg/matcrawl/releases/download/v0.3.0/matcrawl_0.3.0_linux_arm64.tar.gz"
+      sha256 "78b91057b597257535a0d9e0d2b0ef5486c492a963390487b0eb859d97518d22"
       define_method(:install) do
         bin.install "matcrawl"
       end
