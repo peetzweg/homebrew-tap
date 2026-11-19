@@ -5,21 +5,21 @@
 class Matcrawl < Formula
   desc "Local-first Matrix archive crawler"
   homepage "https://github.com/peetzweg/matcrawl"
-  version "0.4.0"
+  version "0.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/peetzweg/matcrawl/releases/download/v0.4.0/matcrawl_0.4.0_darwin_amd64.tar.gz"
-      sha256 "73366483ddaf8b3ac8ec557bba53eae23306eaa2b7408dd50c4c3273408a74b1"
+      url "https://github.com/peetzweg/matcrawl/releases/download/v0.5.0/matcrawl_0.5.0_darwin_amd64.tar.gz"
+      sha256 "6b656c872548b2c870743c7729a4423e2871f1b6ef240715669dbdcd00d84c27"
 
       define_method(:install) do
         bin.install "matcrawl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/peetzweg/matcrawl/releases/download/v0.4.0/matcrawl_0.4.0_darwin_arm64.tar.gz"
-      sha256 "5248be3faff6ae7b73faa2199a7234c6a0f9396d7be2ad7c6e6107bc1e384f45"
+      url "https://github.com/peetzweg/matcrawl/releases/download/v0.5.0/matcrawl_0.5.0_darwin_arm64.tar.gz"
+      sha256 "81dd4e534786c70f4d7c367c86b563af718c03c93898f48d0e7d213314bacec4"
 
       define_method(:install) do
         bin.install "matcrawl"
@@ -29,15 +29,15 @@ class Matcrawl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peetzweg/matcrawl/releases/download/v0.4.0/matcrawl_0.4.0_linux_amd64.tar.gz"
-      sha256 "2f0d1f89c5dccf2dbca6fa186921082d3c58ce24c2ce482a0934af213b1b3d53"
+      url "https://github.com/peetzweg/matcrawl/releases/download/v0.5.0/matcrawl_0.5.0_linux_amd64.tar.gz"
+      sha256 "095af21997570d578634fcd8645f510355a410baba46d2a946166f54145de859"
       define_method(:install) do
         bin.install "matcrawl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/peetzweg/matcrawl/releases/download/v0.4.0/matcrawl_0.4.0_linux_arm64.tar.gz"
-      sha256 "e8a3830ac472922b746a3f18da26af2c5d19a7b3a1bccea7295b147805266841"
+      url "https://github.com/peetzweg/matcrawl/releases/download/v0.5.0/matcrawl_0.5.0_linux_arm64.tar.gz"
+      sha256 "f4587a646eefffaed25f3f88246746761f71465443f68839da2790d537dea0e3"
       define_method(:install) do
         bin.install "matcrawl"
       end
@@ -47,9 +47,10 @@ class Matcrawl < Formula
   def caveats
     <<~EOS
       Run `matcrawl login` to authenticate against your Matrix homeserver,
-      then `matcrawl keys import` with an Element room-keys export
-      (Element → Settings → Security & Privacy → Export E2E room keys) to
-      decrypt E2EE rooms.
+      then `matcrawl sync --backfill`. To decrypt E2EE rooms, run
+      `matcrawl keys backup-pull` (asks for your Element recovery key) or
+      `matcrawl keys import` with an Element room-keys export, then
+      `matcrawl keys retry`.
     EOS
   end
 
